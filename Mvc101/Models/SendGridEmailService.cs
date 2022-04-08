@@ -1,4 +1,5 @@
-﻿using Mvc101.Services.MailService;
+﻿
+using Mvc101.Services.EmailService;
 using SendGrid;
 using SendGrid.Helpers.Mail;
 
@@ -12,6 +13,7 @@ namespace Mvc101.Models
         {
             _sendGridClient = sendGridClient;
         }
+
 
         public Task SendEmailAsync(MailModel model)
         {

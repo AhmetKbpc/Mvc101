@@ -4,6 +4,6 @@ namespace Mvc101.Services.EmailService
 {
     public interface IEmailService
     {
-        Task SendMailAsync(MailModel model);
+        Task SendEmailAsync(MailModel model);
     }
 }   

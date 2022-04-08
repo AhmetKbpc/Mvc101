@@ -8,12 +8,12 @@ namespace Mvc101.Services.EmailService
 {
     public class OutlookEmailService : IEmailService
     {
-        public string SenderMail => "gonderici@mail.com";
-        public string Password => "gondericipassword";
+        public string SenderMail => "gondericimail";
+        public string Password => "sifre";
         public string Smtp => "smtp-mail.outlook.com";
         public int SmtpPort => 587;
 
-        public Task SendMailAsync(MailModel model)
+        public Task SendEmailAsync(MailModel model)
         {
             var mail = new MailMessage { From = new MailAddress(this.SenderMail) };
 

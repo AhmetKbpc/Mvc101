@@ -28,14 +28,14 @@ namespace Mvc101.Controllers
             var wissenSms = (WissenSmsService)_smsService;
             Debug.WriteLine(wissenSms.EndPoint);
 
-            _emailService.SendMailAsync(new MailModel()
+            _emailService.SendEmailAsync(new MailModel()
             {
                 To = new List<EmailModel>()
                 {
                     new EmailModel()
                     {
                         Name = "Wissen",
-                        Adress = "alici@mail.com"
+                        Adress = "alicimail"
                     }
                 },
                 Subject = "Index Açıldı",

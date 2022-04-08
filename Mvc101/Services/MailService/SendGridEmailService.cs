@@ -13,11 +13,11 @@ namespace Mvc101.Services.EmailService
             _sendGridClient = sendGridClient;
         }
 
-        public Task SendMailAsync(MailModel model)
+        public Task SendEmailAsync(MailModel model)
         {
             var msg = new SendGridMessage()
             {
-                From = new EmailAddress("mail@mail.com", "Mail"),
+                From = new EmailAddress("agmet1999@gmail.com", "Mail"),
                 Subject = model.Subject
             };
             msg.AddContent(MimeType.Html, model.Body);
