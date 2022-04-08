@@ -3,12 +3,11 @@ using Mvc101.Models;
 
 namespace Mvc101.Services.SmsService
 {
-    public class WissenSmsService : ISmsService
+    public class SonicSmsService : ISmsService
     {
-        public string EndPoint { get; set; } = "";
         public SmsStates Send(SmsModel model)
         {
-            Debug.WriteLine($"Wissen: {model.TelefonNo} - {model.Mesaj}");
+            Debug.WriteLine($"Sonic: {model.TelefonNo} - {model.Mesaj}");
             return SmsStates.Sent;
         }
     }
